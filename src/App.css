@@ -1,0 +1,43 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 500px;
+    height: 85vh;
+    border: 2px solid #000;
+    padding: 25px;
+}
+
+.game_points,
+.game_time {
+    display: flex;
+    align-items: center;
+}
+
+.game_points p,
+.game_time p:first-child {
+    margin-right: 30px;
+}
+
+.game_points input {
+    height: 20px;
+}
+
+.game_control {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.game_control > button {
+    width: 120px;
+}

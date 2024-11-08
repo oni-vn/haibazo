@@ -1,0 +1,48 @@
+.game_screen {
+    width: 100%;
+    height: calc(85vh - 280px);
+    border: 2px solid #000;
+    position: relative;
+}
+
+.game_screen > .circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #da5555;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+}
+
+.circle > p {
+    margin: 2px;
+}
+
+.circle.active {
+    background-color: #da5555;
+    animation: hideCircle 3s ease-in forwards;
+    transition: animation 3s ease-in-out;
+    animation-play-state: running;
+}
+
+.circle.stop-animation {
+    animation-play-state: paused;
+}
+
+@keyframes hideCircle {
+    from {
+        opacity: 1;
+        display: flex;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
